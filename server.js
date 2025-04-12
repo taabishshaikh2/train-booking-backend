@@ -8,6 +8,9 @@ const seatRoutes = require("./routes/seatRoutes");
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("Train Booking API is live 🚂");
+  });
 
 app.use("/api/auth", authRoutes);
 app.use("/api/seats", seatRoutes);
